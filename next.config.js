@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  
-  // Utiliser remotePatterns au lieu de domains pour les images externes
   images: {
     remotePatterns: [
       {
@@ -15,12 +13,11 @@ const nextConfig = {
       },
     ],
   },
-  
-  // Ignorer les erreurs ESLint pendant le build
+  // Désactiver la vérification ESLint pendant le build
   eslint: {
-    // Ne pas faire échouer le build si des erreurs de linting sont trouvées
     ignoreDuringBuilds: true,
   },
+  // Ignorer les erreurs TypeScript pendant le build
   typescript: {
     ignoreBuildErrors: true,
   }
