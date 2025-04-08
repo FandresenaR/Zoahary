@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 250, 245;  /* Texte plus clair pour meilleur contraste */
+  --background-primary: 59, 42, 34;
+  --background-secondary: 79, 52, 44;
+  --text-dark: 45, 35, 30;         /* Pour texte sur fond clair */
+  --text-light: 255, 250, 245;     /* Pour texte sur fond sombre */
+  --text-accent: 255, 183, 77;     /* Couleur d'accent pour les textes importants */
+  /* Déclarer les variables de police si elles ne sont pas définies dans layout.tsx */
+  --font-primary: 'Montserrat', system-ui, sans-serif;
+  --font-secondary: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-primary)),
+    rgb(var(--background-secondary))
+  );
+  min-height: 100vh;
+  font-family: var(--font-primary);
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+/* Classes de texte améliorées pour meilleure lisibilité */
+.text-on-dark {
+  @apply text-white/90;
+}
+
+.text-on-light {
+  @apply text-gray-800;
+}
+
+.text-muted-on-dark {
+  @apply text-white/70;
+}
+
+.text-muted-on-light {
+  @apply text-gray-600;
+}
+
+.text-accent-on-dark {
+  @apply text-accent-light;
+}
+
+.card {
+  @apply bg-white/90 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden;
+}
+
+.card h2, .card h3 {
+  @apply text-primary-dark;
+}
+
+.card p, .card span {
+  @apply text-gray-700;
+}
+
+.btn {
+  @apply px-6 py-3 font-medium transition-all duration-300 rounded-md;
+}
+
+.btn-primary {
+  @apply text-white bg-primary hover:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply text-white bg-secondary hover:bg-secondary-dark;
+}
+
+.btn-accent {
+  @apply text-gray-800 bg-accent hover:bg-accent-dark;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+}
+
+p, span, a, button, input, textarea {
+  @apply font-sans;
+}
+
+.heading-decoration {
+  @apply relative inline-block;
+}
+
+.heading-decoration::after {
+  content: '';
+  @apply absolute bottom-0 left-1/4 w-1/2 h-1 bg-accent rounded-full;
+}
+
+.baobab-pattern {
+  background-image: url('/images/baobab/pattern.png');
+  background-repeat: repeat;
+  background-size: 200px;
+  background-opacity: 0.05;
+}
+
+/* Suppression de l'ancien effet d'étincelle */
+.sparkle-effect {
+  display: none; /* Désactiver l'ancien effet */
+}
+
+/* Nouvel effet de texte doré */
+.sparkle-text {
+  color: #b8860b;
+  position: relative;
+  z-index: 1;
+}
+
+/* Container pour les étoiles scintillantes */
+.stars-container {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Création des étoiles scintillantes */
+.stars-container::before,
+.stars-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: gold;
+  animation: twinkle-random 0.8s infinite;
+  opacity: 0;
+}
+
+.stars-container::before {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0.3s;
+}
+
+.stars-container::after {
+  bottom: 30%;
+  right: 25%;
+  animation-delay: 0.6s;
+}
+
+/* Ajout de plus d'étoiles avec des pseudo-éléments générés */
+.sparkle-text::before,
+.sparkle-text::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: gold;
+  animation: twinkle-random 1.5s infinite;
+  opacity: 0;
+  z-index: -1;
+}
+
+.sparkle-text::before {
+  top: 10%;
+  left: 80%;
+  animation-delay: 0.2s;
+}
+
+.sparkle-text::after {
+  top: 70%;
+  left: 10%;
+  animation-delay: 0.9s;
+}
+
+/* Animation aléatoire pour les étoiles scintillantes */
+@keyframes twinkle-random {
+  0%, 100% { 
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+}
+
+/* Animation supplémentaire pour plus d'étoiles */
+.sparkle-text span::before,
+.sparkle-text span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #ffeb3b;
+  animation: twinkle-random 0.7s infinite;
+  opacity: 0;
+}
+
+.sparkle-text span::before {
+  top: 40%;
+  right: 5%;
+  animation-delay: 0.4s;
+}
+
+.sparkle-text span::after {
+  bottom: 10%;
+  left: 40%;
+  animation-delay: 0.8s;
+}
+
+/* Animation de brillance pour le texte lui-même */
+.sparkle-text {
+  background: linear-gradient(to right, #8a6d3b 0%, #f6e27a 50%, #8a6d3b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: textShimmer 3s linear infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
