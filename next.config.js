@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   
-  // Remplacer images.domains (déprécié) par images.remotePatterns (recommandé)
+  // Utiliser remotePatterns au lieu de domains pour les images externes
   images: {
     remotePatterns: [
       {
@@ -16,8 +16,9 @@ const nextConfig = {
     ],
   },
   
-  // Configuration pour le déploiement
+  // Ignorer les erreurs ESLint pendant le build
   eslint: {
+    // Ne pas faire échouer le build si des erreurs de linting sont trouvées
     ignoreDuringBuilds: true,
   },
   typescript: {
