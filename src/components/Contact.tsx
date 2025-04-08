@@ -23,7 +23,6 @@ const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [submitCount, setSubmitCount] = useState(0)
   const [lastSubmitTime, setLastSubmitTime] = useState(0)
   const [captchaVerified, setCaptchaVerified] = useState(false)
   
@@ -107,7 +106,6 @@ const Contact = () => {
     
     setIsSubmitting(true)
     setLastSubmitTime(now)
-    setSubmitCount(prev => prev + 1)
     
     try {
       // Sanitiser les données avant l'envoi

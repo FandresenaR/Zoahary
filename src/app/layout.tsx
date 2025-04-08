@@ -1,31 +1,20 @@
-import { Montserrat, Playfair_Display } from 'next/font/google'
+import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
+import React from 'react'
 
-// Configurer les polices (ou remplacer par les polices d'origine)
-const primaryFont = Montserrat({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-primary',
-})
-
-const secondaryFont = Playfair_Display({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-secondary',
-})
-
-export const metadata = {
-  title: 'Zoahary Baobab | Produits naturels à base de Baobab',
-  description: 'Découvrez notre gamme de produits naturels et biologiques à base de baobab. Huiles, poudres et compléments alimentaires pour votre bien-être.',
+export const metadata: Metadata = {
+  title: 'Zoahary Baobab - Produits naturels de Madagascar',
+  description: "Découvrez nos produits naturels et biologiques à base de baobab, l'arbre de vie malgache aux multiples bienfaits.",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="fr" className={`${primaryFont.variable} ${secondaryFont.variable}`}>
-      <body>
-        {children}
-      </body>
+    <html lang="fr">
+      <body className="overflow-x-hidden min-h-screen">{children}</body>
     </html>
   )
 }

@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FiAward, FiExternalLink, FiAperture } from 'react-icons/fi'
+import Image from 'next/image'
+import { FiAward, FiExternalLink } from 'react-icons/fi'
 
 const Achievements = () => {
   const [ref, inView] = useInView({
