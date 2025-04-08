@@ -127,14 +127,14 @@ const Footer = () => {
           <div className="mt-2 sm:mt-0">
             <ul className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <Link href="/confidentialite" className="text-gray-400 hover:text-white transition-colors duration-300">
                   Politique de confidentialité
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <Link href="/conditions-generales" className="text-gray-400 hover:text-white transition-colors duration-300">
                   Conditions générales
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

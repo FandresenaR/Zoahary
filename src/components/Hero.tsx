@@ -26,7 +26,7 @@ const Hero = () => {
               Découvrez le <span className="relative inline-block sparkle-text font-semibold">
                 Made in Madagascar
                 <span className="stars-container"></span>
-              </span> 100% naturels et biologiques à base de baobab, l&apos;arbre de vie aux multiples bienfaits nutritionnels.
+              </span> 100% naturels et biologiques à base de baobab, l\'arbre de vie aux multiples bienfaits nutritionnels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link href="#produits" className="btn btn-primary">

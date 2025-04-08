@@ -26,14 +26,14 @@ const products = [
   {
     id: 3,
     name: 'Gélules de Baobab',
-    description: 'Complément alimentaire concentré pour renforcer l&apos;immunité et améliorer la digestion.',
+    description: 'Complément alimentaire concentré pour renforcer l\'immunité et améliorer la digestion.',
     price: '29,90 €',
     image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=1170&auto=format&fit=crop',
   },
   {
     id: 4,
     name: 'Savon Exfoliant au Baobab',
-    description: 'Savon artisanal à l&apos;huile et aux graines de baobab pour une peau douce et purifiée.',
+    description: 'Savon artisanal à l\'huile et aux graines de baobab pour une peau douce et purifiée.',
     price: '12,90 €',
     image: 'https://images.unsplash.com/photo-1547793548-7a0e7dfdb24f?q=80&w=1170&auto=format&fit=crop',
   },

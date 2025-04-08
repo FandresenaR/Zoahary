@@ -7,7 +7,7 @@ import { FiHeart, FiSun, FiShield, FiRefreshCw } from 'react-icons/fi'
 const benefits = [
   {
     title: 'Riche en Vitamines',
-    description: 'Le fruit du baobab contient 6 fois plus de vitamine C que l&apos;orange et est riche en vitamines A, B1, B2 et B6.',
+    description: 'Le fruit du baobab contient 6 fois plus de vitamine C que l\'orange et est riche en vitamines A, B1, B2 et B6.',
     icon: FiSun,
   },
   {
@@ -16,13 +16,13 @@ const benefits = [
     icon: FiShield,
   },
   {
-    title: 'Stimule l&apos;Immunité',
+    title: 'Stimule l\'Immunité',
     description: 'Favorise une meilleure réponse immunitaire et aide à combattre naturellement les infections.',
     icon: FiHeart,
   },
   {
     title: 'Énergie Durable',
-    description: 'Source naturelle d&apos;énergie qui améliore l&apos;endurance et combat efficacement la fatigue.',
+    description: 'Source naturelle d\'énergie qui améliore l\'endurance et combat efficacement la fatigue.',
     icon: FiRefreshCw,
   },
 ]
