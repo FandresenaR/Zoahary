@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { FiMenu, FiX, FiAward, FiFacebook } from 'react-icons/fi'
 
 const Header = () => {

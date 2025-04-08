@@ -12,12 +12,18 @@
 /out/
 /build
 
+# production
+/dist
+
 # misc
 .DS_Store
 *.pem
 Thumbs.db
 .env
-.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # debug
 npm-debug.log*
@@ -42,8 +48,9 @@ next-env.d.ts
 # cache
 .cache
 .eslintcache
+.stylelintcache
 
-# OS generated files
+# Système
 .DS_Store
 .DS_Store?
 ._*
