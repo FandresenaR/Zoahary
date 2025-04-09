@@ -174,7 +174,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-500">Adresse</h4>
-                  <p className="text-gray-600">25 Rue de Madagascar, 75008 Paris, France</p>
+                  <p className="text-gray-600">Antaravay Salimo, Tulear, Madagascar</p>
                 </div>
               </div>
               
@@ -184,7 +184,9 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-500">Téléphone</h4>
-                  <p className="text-gray-600">+33 1 23 45 67 89</p>
+                  <p className="text-gray-600">+261 37 07 000 96</p>
+                  <p className="text-gray-600">+261 32 92 815 97</p>
+                  <p className="text-gray-600">+261 34 09 100 96</p>
                 </div>
               </div>
               
@@ -194,7 +196,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-500">Email</h4>
-                  <p className="text-gray-600">contact@zoaharybaobab.com</p>
+                  <p className="text-gray-600">zoahary.baobab01@gmail.com</p>
                 </div>
               </div>
             </div>
