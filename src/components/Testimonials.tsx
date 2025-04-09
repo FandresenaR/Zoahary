@@ -90,7 +90,7 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold">{testimonial.name}</h3>
+                  <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
